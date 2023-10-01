@@ -1,7 +1,7 @@
 {
-    "name": "desafio_integracion",
+    "name": "reestructura_servidor",
     "version": "1.0.0",
-    "description": "Practica integracion, CoderHouse Desafio",
+    "description": "Reestructura Servidor, CoderHouse Desafio",
     "main": "src/server.js",
     "type": "module",
     "scripts": {
