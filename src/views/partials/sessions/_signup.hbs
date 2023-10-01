@@ -1,0 +1,69 @@
+<link rel="stylesheet" href="css/sessions/register.css" />
+
+<!-- ★━━━━━━━━━━━★ Register ★━━━━━━━━━━━★ -->
+
+<form id="registerForm" action="/api/sessions/singup/" method="post">
+    <div class="text-center mb-3">
+        <p>Sign up with:</p>
+        <button type="button" class="btn btn-secondary btn-floating mx-1">
+            <i class="fab fa-facebook-f"></i>
+        </button>
+
+        <button type="button" class="btn btn-secondary btn-floating mx-1">
+            <i class="fab fa-google"></i>
+        </button>
+
+        <button type="button" class="btn btn-secondary btn-floating mx-1">
+            <i class="fab fa-twitter"></i>
+        </button>
+
+        <button type="button" class="btn btn-secondary btn-floating mx-1">
+            <i class="fab fa-github"></i>
+        </button>
+    </div>
+
+    <p class="text-center">or:</p>
+
+    <!-- Name input -->
+    <div class="form-outline mb-4">
+        <input type="text" id="registerName" class="form-control" />
+        <label class="form-label" for="registerName">Name</label>
+    </div>
+    <!-- Last Name input -->
+    <div class="form-outline mb-4">
+        <input type="text" id="registerLastName" class="form-control" />
+        <label class="form-label" for="registerLastName">Last Name</label>
+    </div>
+
+    <!-- Age input -->
+    <div class="form-outline mb-4">
+        <input type="number" id="registerAge" class="form-control" />
+        <label class="form-label" for="registerAge">Age</label>
+    </div>
+
+    <!-- Email input -->
+    <div class="form-outline mb-4">
+        <input type="email" id="registerEmail" class="form-control" />
+        <label class="form-label" for="registerEmail">Email</label>
+    </div>
+
+    <!-- Password input -->
+    <div class="form-outline mb-4">
+        <input type="password" id="registerPassword" class="form-control" />
+        <label class="form-label" for="registerPassword">Password</label>
+    </div>
+
+    <!-- Repeat Password input -->
+    <div class="form-outline mb-4">
+        <input
+            type="password"
+            id="registerRepeatPassword"
+            class="form-control"
+        />
+        <label class="form-label" for="registerRepeatPassword">Repeat password</label>
+    </div>
+
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary btn-block mb-3">Sign up</button>
+</form>
+<script src="js/sessions/signup.js"></script>

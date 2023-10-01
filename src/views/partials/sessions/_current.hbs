@@ -1,0 +1,46 @@
+<!-- user_profile.hbs -->
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>User Profile</title>
+        <style>
+            body { background-color: #f3f3f3; font-family: Arial, sans-serif;
+            margin: 0; padding: 0; } .header { background-color: #3498db; color:
+            #fff; padding: 10px 0; text-align: center; } .user-profile {
+            background-color: #fff; border: 1px solid #ddd; border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); margin: 20px auto;
+            max-width: 400px; padding: 20px; text-align: center; } .user-profile
+            h1 { color: #3498db; } .user-profile p { margin: 10px 0; }
+            .btn-logout { background-color: #e74c3c; border: none; color: #fff;
+            padding: 10px 20px; border-radius: 4px; cursor: pointer; transition:
+            background-color 0.3s; } .btn-logout:hover { background-color:
+            #c0392b; }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Path: "/current"</h1>
+        </div>
+        <form action="/api/sessions/logout" method="POST">
+            <button type="submit" class="btn-logout">Logout</button>
+        </form>
+        <div class="user-profile">
+            {{#if user}}
+                <h1>User Profile</h1>
+                <p><strong>ID:</strong> {{user.id}}</p>
+                <p><strong>Name:</strong> {{user.name}}</p>
+                <p><strong>Last Name:</strong> {{user.lastName}}</p>
+                <p><strong>Age:</strong> {{user.age}}</p>
+                <p><strong>Email:</strong> {{user.email}}</p>
+                <p><strong>Password:</strong> {{user.password}}</p>
+                <p><strong>Role:</strong> {{user.role}}</p>
+                <p><strong>Cart ID:</strong> {{user.cartId}}</p>
+
+            {{else}}
+                <p><strong>Error:</strong> Usuario no encontrado</p>
+            {{/if}}
+        </div>
+    </body>
+</html>

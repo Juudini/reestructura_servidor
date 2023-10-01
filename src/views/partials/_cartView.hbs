@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="css/productsCarts.css" />
+<section id="productsCarts">
+    <h1>Products in Cart</h1>
+    <div class="product-grid">
+        {{#each products}}
+            <div class="product">
+                <div class="product-thumbnail">
+                    <img src="{{_id.thumbnail}}" alt="{{title}}" width="200" />
+                </div>
+                <div class="product-info">
+                    <h2>{{title}}</h2>
+                    <p>ID: {{_id._id}}</p>
+                    <p>Description: {{_id.description}}</p>
+                    <p>Code: {{_id.code}}</p>
+                    <p>Price: {{_id.price}}</p>
+                    {{#if _id.status}}
+                        <p>Status: Available</p>
+                    {{else}}
+                        <p>Status: Not Available</p>
+                    {{/if}}
+                    <p>Stock: {{_id.stock}}</p>
+                    <p>Category: {{_id.category}}</p>
+                    <p>Quantity: {{quantity}}</p>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</section>

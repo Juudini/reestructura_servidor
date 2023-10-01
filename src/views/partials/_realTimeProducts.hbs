@@ -1,0 +1,31 @@
+<div class="text-center">
+    <p style="font-size: 24px; color: blue;">Bienvenido,
+        {{sessionData.username}}
+        | Role:
+        {{sessionData.role}}</p>
+    <form action="/api/session/logout" method="POST">
+        <button type="submit" class="btn btn-primary">Logout</button>
+    </form>
+</div>
+
+<section id="productsPage">
+    <h1>Products Catalog</h1>
+    <div class="product-list">
+        {{#each products}}
+            <div class="product">
+                <div class="product-thumbnail">
+                    <img src="{{thumbnail}}" alt="{{title}}" width="200" />
+                </div>
+                <div class="product-info">
+                    <h2>{{title}}</h2>
+                    <p>Price: {{price}}</p>
+                    <button class="add-to-cart" data-product-id="{{_id}}">Add to
+                        Cart</button>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</section>
+
+<script src="socket.io/socket.io.js"></script>
+<script src="js/productView.js"></script>

@@ -1,0 +1,80 @@
+/* Estilos para los formularios dentro de las pestañas */
+.tab-content {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-outline {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #333;
+}
+
+.form-label {
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+    font-size: 1rem;
+    color: #007bff;
+    transition: 0.2s;
+    pointer-events: none;
+    background-color: #fff;
+    padding: 0 0.5rem;
+    transform-origin: 0 0;
+    transform: translateY(-50%);
+}
+
+.form-control:focus + .form-label,
+.form-control:not(:placeholder-shown) + .form-label {
+    top: -0.5rem;
+    font-size: 0.8rem;
+    color: #007bff;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 0 0.2rem;
+    transform: translateY(0%);
+}
+
+/* Estilos para los botones de redes sociales */
+.btn-secondary.btn-floating {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    margin: 5px;
+    background-color: #fff;
+    color: #007bff;
+    border: 2px solid #007bff;
+}
+
+/* Estilos para el enlace "Forgot password?" */
+a[href="#!"] {
+    text-decoration: none;
+    color: #007bff;
+}
+
+/* Estilos para el contenido de las pestañas */
+.tab-pane {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+.tab-pane.show {
+    display: block;
+}
